@@ -1,21 +1,34 @@
 const Recipe = require("../recipes/recipes");
 const imageProcess = require("../util/imageProcess");
 
+const recipes = new Recipe();
+
 const createRecipes = async (req, res) => {
 
-    const recipe = new Recipe();
-    const id = recipe.createId();
+    const id = recipes.createId();
 
     try {
         const imageName = await imageProcess(req, id);
-        await recipe.create(req.body, id, imageName);
-        await imageProcess(req, id);
+        await recipes.create(req.body, id, imageName);
+        res.json({success:true, message: 'Post create successfully.'})
         res.send("submit successful");
     } catch (error) {
+        res.json({success:false, message: 'Something went wrong, server error!'});
         console.log('Error while creating recipe', error.message);
     }
 }
 
+const getAllRecipes = async (req, res) => {
+    try {
+        const data = await recipes.getAll();
+        res.json({sucess: true, recipes: data})
+    } catch (error) {
+        res.json({success:false, message: 'Something went wrong, server error!'});
+        console.log('Error while getting all recipe', error.message);
+    }
+}
+
 module.exports = {
-    createRecipes
+    createRecipes,
+    getAllRecipes
 }

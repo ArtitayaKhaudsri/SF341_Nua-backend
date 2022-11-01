@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const uploads = require('../middleware/multer');
-const {createRecipes} = require('../controller/recipe');
+const {createRecipes, getAllRecipes} = require('../controller/recipe');
 const {validator, result, validateFile} = require('../middleware/validator');
 
 router.post(
@@ -12,5 +12,7 @@ router.post(
     validateFile,
     createRecipes
 )
+//check all recipes at http://localhost:3410/api/recipes
+router.get('/recipes', getAllRecipes);
 
 module.exports = router;

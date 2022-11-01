@@ -43,6 +43,8 @@ const resetForm =() => {
     select('#menuName').value = '';
     select('#title').value = '';
     select('#type').value = '0';
+    select('#level').value = '0';
+    select('#foodAllergy').value = ''
     select('#picture').value = null;
     select('#rawMaterial').value = '';
     select('#step1').value = '';
@@ -83,17 +85,15 @@ const postData = async (data) => {
         method: 'POST',
         body: data,
     });
-    /*console.log(data)
+
     if (result.ok) {
         const response = await result.json()
-        if (response.succes) {
-            //displayMessage(response.message, 'green');
-            console.log("success")
+        if (response.success) {
+            displayMessage(response.message, 'green');
             resetForm();
         }
-        if (!response.succes) {
-            console.log("error")
-            //displayMessage(response.message, 'red')
+        if (!response.success) {
+            displayMessage(response.message, 'red')
         }
-    }*/
+    }
 };

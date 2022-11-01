@@ -1,13 +1,14 @@
 [
   {
     "menuName": "afafa",
-    "title": "afdf",
-    "type": "puff",
+    "title": "fawef",
+    "type": "boiled",
     "level": "hard",
     "foodAllergy": "fawe",
-    "rawMaterial": "afefr",
+    "rawMaterial": "awefe",
     "step1": "dsvsdv",
-    "step2": "",
+    "step2": "afewaf",
+    "timer2": "on",
     "step3": "",
     "step4": "",
     "step5": "",
@@ -16,7 +17,7 @@
     "step8": "",
     "step9": "",
     "step10": "",
-    "id": "1667297998037",
-    "picture": "http://local:3410/image-name/1667297998037-eggfire.png"
+    "id": "1667302565493",
+    "picture": "http://local:3410/image-name/1667302565493-eggfire.png"
   }
 ]
