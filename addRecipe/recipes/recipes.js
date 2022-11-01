@@ -6,9 +6,9 @@ class Recipes {
     constructor(filename = 'recipes.json') {
         this.path = `./addRecipe/data/${filename}`;
         try {
-            fs.readdirSync('data')
+            fs.readdirSync('./addRecipe/data')
         } catch (error) {
-            fs.mkdirSync('data')
+            fs.mkdirSync('./addRecipe/data')
         }
         try {
             fs.accessSync(this.path)

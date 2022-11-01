@@ -23,12 +23,28 @@
         </div>
         <div class="input-container">
             <select name="type" id="type">
-                <option value="0">--ชนิด-- <sup>*</sup></option>
+                <option value="0">ชนิด <sup>*</sup></option>
                 <option value="boiled">ต้ม</option>
                 <option value="puff">ผัด</option>
                 <option value="fried">ทอด</option>
                 <option value="other">อื่นๆ</option>
             </select>
+        </div>
+        <div class="input-container">
+            <select name="level" id="level">
+                <option value="0">ระดับความยาก-ง่าย <sup>*</sup></option>
+                <option value="hard">ยาก</option>
+                <option value="medium">ปานกลาง</option>
+                <option value="easy">ง่าย</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label class="label" for="foodAllergy">อาหารที่แพ้ </label>
+            <input type="text" name="foodAllergy" id="foodAllergy" class="input" />
+        </div>
+        <div class="input-container">
+            <label for="picture">Picture <sup>*</sup></label>
+            <input type="file" name="picture" id="picture" />
         </div>
         <div class="input-container">
             <label class="label" for="rawMaterial">วัตถุดิบ <sup>*</sup></label>
@@ -39,10 +55,6 @@
                   rows="10"
                   class="input"
           ></textarea>
-        </div>
-        <div class="input-container">
-            <label for="picture">Picture <sup>*</sup></label>
-            <input type="file" name="picture" id="picture" />
         </div>
         <hr>
         <div>

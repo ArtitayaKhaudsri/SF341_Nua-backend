@@ -16,10 +16,11 @@ const validateForm = () => {
     const menuName = select("#menuName").value.trim();
     const title = select("#title").value.trim()
     const picture = select("#picture").value
+    const level = select('#level').value
     const rawMaterial = select("#rawMaterial").value.trim()
     const type = select("#type").value
     const step1 = select("#step1").value
-    if (!menuName || !title || !picture || !rawMaterial || type == '0' || !step1) {
+    if (!menuName || !title || !picture || !rawMaterial || type == '0' || !step1 || level == '0') {
         return displayMessage('Field can not be empty', 'red')
     }
 
@@ -82,7 +83,6 @@ const postData = async (data) => {
         method: 'POST',
         body: data,
     });
-
     /*console.log(data)
     if (result.ok) {
         const response = await result.json()
