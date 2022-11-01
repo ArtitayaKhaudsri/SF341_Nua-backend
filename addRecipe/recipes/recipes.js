@@ -1,4 +1,5 @@
 const fs = require('fs')
+const {log} = require("sharp/lib/libvips");
 
 class Recipes {
 
@@ -35,8 +36,8 @@ class Recipes {
     }
 
     async getSingle(id) {
-        const data = await this.getAll()
-        return data.find(recipes => recipes.id === id);
+        const data = JSON.parse(await fs.promises.readFile(this.path));
+        return data.find(Recipes => Recipes.id === id);
     }
 
     async getByType(type) {
@@ -46,4 +47,4 @@ class Recipes {
 
 }
 
-module.exports = Recipes
+module.exports = Recipes;
