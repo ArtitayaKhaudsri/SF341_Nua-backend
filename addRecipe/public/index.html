@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Recipes Dashboard</title>
+</head>
+
+<body>
+<div class="form-container">
+    <h1 class="heading">Post recipes</h1>
+
+    <p class="message">Error</p>
+    <form class="form" enctype="multipart/form-data">
+        <div class="input-container">
+            <label class="label" for="menuName">ชื่อเมนู <sup>*</sup></label>
+            <input type="text" name="menuName" id="menuName" class="input" />
+        </div>
+        <div class="input-container">
+            <label class="label" for="title">title <sup>*</sup></label>
+            <input type="text" name="title" id="title" class="input" />
+        </div>
+        <div class="input-container">
+            <select name="type" id="type">
+                <option value="0">ชนิด <sup>*</sup></option>
+                <option value="boiled">ต้ม</option>
+                <option value="puff">ผัด</option>
+                <option value="fried">ทอด</option>
+                <option value="other">อื่นๆ</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <select name="level" id="level">
+                <option value="0">ระดับความยาก-ง่าย <sup>*</sup></option>
+                <option value="hard">ยาก</option>
+                <option value="medium">ปานกลาง</option>
+                <option value="easy">ง่าย</option>
+            </select>
+        </div>
+        <div class="input-container">
+            <label class="label" for="foodAllergy">อาหารที่แพ้ </label>
+            <input type="text" name="foodAllergy" id="foodAllergy" class="input" />
+        </div>
+        <div class="input-container">
+            <label for="picture">Picture <sup>*</sup></label>
+            <input type="file" name="picture" id="picture" />
+        </div>
+        <div class="input-container">
+            <label class="label" for="rawMaterial">วัตถุดิบ <sup>*</sup></label>
+            <textarea
+                  name="rawMaterial"
+                  id="rawMaterial"
+                  cols="30"
+                  rows="10"
+                  class="input"
+          ></textarea>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่1</h2>
+            <div class="input-container">
+                <label class="label" for="step1">ขั้นตอน <sup>*</sup></label>
+                <input type="text" name="step1" id="step1" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer1" id="timer1" />
+                <label for="timer1">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่2</h2>
+            <div class="input-container">
+                <label class="label" for="step2">ขั้นตอน</label>
+                <input type="text" name="step2" id="step2" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer2" id="timer2" />
+                <label for="timer2">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่3</h2>
+            <div class="input-container">
+                <label class="label" for="step3">ขั้นตอน</label>
+                <input type="text" name="step3" id="step3" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer3" id="timer3" />
+                <label for="timer2">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่4</h2>
+            <div class="input-container">
+                <label class="label" for="step4">ขั้นตอน</label>
+                <input type="text" name="step4" id="step4" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer4" id="timer4" />
+                <label for="timer4">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่5</h2>
+            <div class="input-container">
+                <label class="label" for="step5">ขั้นตอน</label>
+                <input type="text" name="step5" id="step5" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer5" id="timer5" />
+                <label for="timer5">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่6</h2>
+            <div class="input-container">
+                <label class="label" for="step6">ขั้นตอน </label>
+                <input type="text" name="step6" id="step6" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer6" id="timer6" />
+                <label for="timer6">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่7</h2>
+            <div class="input-container">
+                <label class="label" for="step7">ขั้นตอน </label>
+                <input type="text" name="step7" id="step7" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer7" id="timer7" />
+                <label for="timer7">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่8</h2>
+            <div class="input-container">
+                <label class="label" for="step8">ขั้นตอน</label>
+                <input type="text" name="step8" id="step8" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer8" id="timer8" />
+                <label for="timer8">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่9</h2>
+            <div class="input-container">
+                <label class="label" for="step9">ขั้นตอน</label>
+                <input type="text" name="step9" id="step9" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer9" id="timer9" />
+                <label for="timer9">จับเวลา</label>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <h2 class="heading">ขั้นที่10</h2>
+            <div class="input-container">
+                <label class="label" for="step10">ขั้นตอน</label>
+                <input type="text" name="step10" id="step10" class="input" />
+            </div>
+            <div class="input-container featured-container">
+                <input type="checkbox" name="timer10" id="timer10" />
+                <label for="timer10">จับเวลา</label>
+            </div>
+        </div>
+        <div class="input-container">
+            <input type="submit" value="SUBMIT" class="btn" />
+        </div>
+    </form>
+    <div class="test"></div>
+</div>
+<script src="main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>
