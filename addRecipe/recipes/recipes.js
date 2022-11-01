@@ -23,7 +23,7 @@ class Recipes {
     }
 
     async create(data, id, imageName) {
-        const totalData = await this.getAll()
+        const totalData = JSON.parse(await fs.promises.readFile(this.path));
         totalData.push({...data, id, picture: `http://local:3410/image-name/${imageName}`});
         await fs.promises.writeFile(
             this.path,

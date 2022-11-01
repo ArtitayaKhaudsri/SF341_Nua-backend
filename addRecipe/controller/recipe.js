@@ -42,8 +42,23 @@ const getSingleRecipe = async (req, res) => {
     }
 }
 
+const getRecipeByType = async (req, res) => {
+    try {
+        const data = await recipes.getByType(req.params.type)
+        console.log(data)
+        if (!data) {
+            return res.json({success:false, message: 'Post not found!'})
+        }
+        res.json({success:true, recipes: data})
+    } catch (error) {
+        res.json({success:false, message: 'Something went wrong, server error!'});
+        console.log('Error while getting recipes by type', error.message);
+    }
+}
+
 module.exports = {
     createRecipes,
     getAllRecipes,
-    getSingleRecipe
+    getSingleRecipe,
+    getRecipeByType
 }

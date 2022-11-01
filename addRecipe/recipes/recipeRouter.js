@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const uploads = require('../middleware/multer');
-const {createRecipes, getAllRecipes, getSingleRecipe} = require('../controller/recipe');
+const {createRecipes, getAllRecipes, getSingleRecipe, getRecipeByType} = require('../controller/recipe');
 const {validator, result, validateFile} = require('../middleware/validator');
 
 router.post(
@@ -16,5 +16,6 @@ router.post(
 router.get('/recipes', getAllRecipes);
 
 router.get('/recipes/single/:id', getSingleRecipe);
+router.get('/recipes/:type', getRecipeByType)
 
 module.exports = router;
