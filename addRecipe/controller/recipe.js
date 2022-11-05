@@ -45,7 +45,6 @@ const getSingleRecipe = async (req, res) => {
 const getRecipeByType = async (req, res) => {
     try {
         const data = await recipes.getByType(req.params.type)
-        console.log(data)
         if (!data) {
             return res.json({success:false, message: 'Post not found!'})
         }
