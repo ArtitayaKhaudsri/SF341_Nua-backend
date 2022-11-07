@@ -15,7 +15,7 @@ const jwt = require('jsonwebtoken');
 const recipeRouter = require('./addRecipe/recipes/recipeRouter');
 const {hash} = require("bcrypt");
 
-app.use(cors())
+app.use(cors({origin: true}))
 
 app.use(express.static("./addRecipe/public"));
 app.use(express.static("./addRecipe/data/uploads"));
