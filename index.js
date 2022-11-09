@@ -19,8 +19,7 @@ const {hash} = require("bcrypt");
 //connect mongoDB
 const mongo_uri = "mongodb+srv://Nua:aU3qA9fnZPswqbG9@clusternua.mzaxzrc.mongodb.net/?retryWrites=true&w=majority"
 mongoose.Promise = global.Promise;
-mongoose.connect(mongo_uri, { useNewUrlParser: true }).then(
-    () => {
+mongoose.connect(mongo_uri, { useNewUrlParser: true }).then(() => {
         console.log("[success] task 2 : connected to the database ");
     },
     error => {
@@ -39,12 +38,6 @@ app.use(express.static("./addRecipe/public"));
 app.use(express.static("./addRecipe/data/uploads"));
 app.use('/api', recipeRouter);
 
-// create the connection to database
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    database: 'mydb' //http://localhost/phpmyadmin/
-});
 //user schema
 const userSchema = new mongoose.Schema({
     userName: String,
