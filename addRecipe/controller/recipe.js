@@ -10,7 +10,7 @@ const createRecipes = async (req, res) => {
     try {
         const imageName = await imageProcess(req, id);
         await recipes.create(req.body, id, imageName);
-        res.json({success:true, message: 'Post create successfully.'})
+        res.json({ message: 'Post create successfully.'})
         res.send("submit successful");
     } catch (error) {
         res.json({success:false, message: 'Something went wrong, server error!'});
@@ -21,7 +21,7 @@ const createRecipes = async (req, res) => {
 const getAllRecipes = async (req, res) => {
     try {
         const data = await recipes.getAll();
-        res.json({sucess: true, recipes: data})
+        res.json(data)
     } catch (error) {
         res.json({success:false, message: 'Something went wrong, server error!'});
         console.log('Error while getting all recipe', error.message);
@@ -34,7 +34,7 @@ const getSingleRecipe = async (req, res) => {
         if (!data) {
             return res.json({success:false, message: 'Post not found!'})
         }
-        res.json({success:true, recipes: data})
+        res.json(data)
 
     } catch (error) {
         res.json({success:false, message: 'Something went wrong, server error!'});
@@ -48,7 +48,7 @@ const getRecipeByType = async (req, res) => {
         if (!data) {
             return res.json({success:false, message: 'Post not found!'})
         }
-        res.json({success:true, recipes: data})
+        res.json( data)
     } catch (error) {
         res.json({success:false, message: 'Something went wrong, server error!'});
         console.log('Error while getting recipes by type', error.message);
