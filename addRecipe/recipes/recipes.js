@@ -1,4 +1,5 @@
-const fs = require('fs')
+const fs = require('fs');
+const {log} = require("sharp/lib/libvips");
 
 class Recipes {
 
@@ -42,6 +43,20 @@ class Recipes {
     async getByType(type) {
         const data = await this.getAll();
         return data.filter(recipes => recipes.type === type);
+    }
+    
+    async updatelike(id,like){
+        const data = await this.getAll();
+        var index = data.findIndex(function(data) {
+            return data.id == id
+          });
+        data[index].like = true?like=="true":false;
+        await fs.promises.writeFile(
+            this.path,
+            JSON.stringify(data, null, 2) //formatting in recipes.json
+        );
+        console.log(data);
+        return data;
     }
 
 }
