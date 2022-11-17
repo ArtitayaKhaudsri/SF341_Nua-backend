@@ -5,10 +5,10 @@ const mongo_uri = "mongodb+srv://Nua:aU3qA9fnZPswqbG9@clusternua.mzaxzrc.mongodb
 
 mongoose.Promise = global.Promise;
 mongoose.connect(mongo_uri, { useNewUrlParser: true }).then(() => {
-        console.log("[success] task 2 : connected to the database ");
+        console.log("[success] task 1 : connected to the database ");
     },
     error => {
-        console.log("[failed] task 2 " + error);
+        console.log("[failed] task 1 " + error);
         process.exit();
     }
 );

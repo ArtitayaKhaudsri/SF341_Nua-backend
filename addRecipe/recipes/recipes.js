@@ -1,5 +1,4 @@
 const fs = require('fs')
-const {log} = require("sharp/lib/libvips");
 
 class Recipes {
 

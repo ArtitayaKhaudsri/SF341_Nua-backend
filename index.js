@@ -5,10 +5,7 @@ const bodyParser = require('body-parser');
 const recipeRouter = require('./addRecipe/recipes/recipeRouter');
 const loginRouter = require('./user/router/loginRouter');
 const registerRouter = require('./user/router/registerRouter');
-
-const ip = 'current_local_ip'
-
-console.log(ip)
+const logout = require('./user/router/loginRouter');
 
 app.use(cors());
 
@@ -22,8 +19,8 @@ app.use('/api', recipeRouter);
 
 //routes routes
 app.post("/login", loginRouter);
-
-app.post("/register",registerRouter)
+app.post("/register",registerRouter);
+app.use("/logout", logout);
 
 const port = process.env.PORT || 3410;
 
