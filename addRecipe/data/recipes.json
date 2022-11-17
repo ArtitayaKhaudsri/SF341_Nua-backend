@@ -31,7 +31,8 @@
     "step10": "",
     "timer10": "",
     "id": "1667668916329",
-    "picture": "http://local:3410/image-name/1667668916329-7606c9da22498e9b50b3419406e39af9_7o5a6047_944_531.jpg"
+    "picture": "http://local:3410/image-name/1667668916329-7606c9da22498e9b50b3419406e39af9_7o5a6047_944_531.jpg",
+    "like": false
   },
   {
     "menuName": "ต้มแซ่บกระดูกหมู",
@@ -65,7 +66,8 @@
     "step10": "",
     "timer10": "",
     "id": "1668357712600",
-    "picture": "http://local:3410/image-name/1668357712600-85e48a46-7e8f-46bc-a81f-aa82b75e40c5.jpg"
+    "picture": "http://local:3410/image-name/1668357712600-85e48a46-7e8f-46bc-a81f-aa82b75e40c5.jpg",
+    "like": false
   },
   {
     "menuName": "กะหล่ำปลีผัดน้ำปลา",
@@ -98,7 +100,8 @@
     "step10": "",
     "timer10": "",
     "id": "1668358768339",
-    "picture": "http://local:3410/image-name/1668358768339-maxresdefault.jpg"
+    "picture": "http://local:3410/image-name/1668358768339-maxresdefault.jpg",
+    "like": false
   },
   {
     "menuName": "ยำวุ้นเส้นหมูทะเล",
@@ -132,6 +135,7 @@
     "step10": "",
     "timer10": "",
     "id": "1668360744400",
-    "picture": "http://local:3410/image-name/1668360744400-Yummy-sea-vermicelli.jpg"
+    "picture": "http://local:3410/image-name/1668360744400-Yummy-sea-vermicelli.jpg",
+    "like": false
   }
 ]
