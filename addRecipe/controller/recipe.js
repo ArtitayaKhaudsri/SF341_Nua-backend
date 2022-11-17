@@ -55,9 +55,24 @@ const getRecipeByType = async (req, res) => {
     }
 }
 
+const updateLike = async (req, res) => {
+    try {
+        const data = await recipes.updatelike(req.params.id,req.params.like)
+        if (!data) {
+            return res.json({success:false, message: 'Post not found!'})
+        }
+        res.json(data)
+
+    } catch (error) {
+        res.json({success:false, message: 'Something went wrong, server error!'});
+        console.log('Error while getting single recipe', error.message);
+    }
+}
+
 module.exports = {
     createRecipes,
     getAllRecipes,
     getSingleRecipe,
-    getRecipeByType
+    getRecipeByType,
+    updateLike
 }
