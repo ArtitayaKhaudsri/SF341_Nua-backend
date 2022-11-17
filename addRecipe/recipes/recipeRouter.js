@@ -16,6 +16,8 @@ router.post(
 router.get('/recipes', getAllRecipes);
 
 router.get('/recipes/single/:id', getSingleRecipe);
-router.get('/recipes/:type', getRecipeByType)
+router.get('/recipes/:type', getRecipeByType);
+router.get('/recipes/update/:id/:like', updateLike);
+
 
 module.exports = router;
