@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const uploads = require('../middleware/multer');
-const {createRecipes, getAllRecipes, getSingleRecipe, getRecipeByType} = require('../controller/recipe');
+const {createRecipes, getAllRecipes, getSingleRecipe, getRecipeByType, updateLike} = require('../controller/recipe');
 const {validator, result, validateFile} = require('../middleware/validator');
 
 router.post(
